@@ -1,0 +1,6 @@
+rootProject.name = "AutoInit"
+include ':app'
+include ':InitAnnotation'
+include ':AutoInitProcessor'
+include ':AutoInitApi'
+include ':test'
