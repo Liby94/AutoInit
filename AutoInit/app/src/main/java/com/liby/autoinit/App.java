@@ -4,8 +4,13 @@ import android.app.Application;
 import android.content.ComponentCallbacks;
 import android.content.Context;
 import android.content.res.Configuration;
+import android.os.Build;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
+
+import com.liby.init.api.AutoInit;
+import com.liby.init.api.AutoInitService;
 
 /**
  * @author: LiBing
@@ -14,9 +19,11 @@ import androidx.annotation.NonNull;
  */
 public class App extends Application {
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
+        AutoInit.GetInstance.INIT.init(base);
     }
 
 

@@ -1,10 +1,7 @@
-package com.alibaba.android.arouter.thread;
+package com.liby.init.api;
 
 
 import androidx.annotation.NonNull;
-
-import com.alibaba.android.arouter.launcher.ARouter;
-import com.alibaba.android.arouter.utils.Consts;
 
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -33,7 +30,7 @@ public class DefaultThreadFactory implements ThreadFactory {
     @Override
     public Thread newThread(@NonNull Runnable runnable) {
         String threadName = namePrefix + threadNumber.getAndIncrement();
-        ARouter.logger.info(Consts.TAG, "Thread production, name is [" + threadName + "]");
+        // ARouter.logger.info(Consts.TAG, "Thread production, name is [" + threadName + "]");
         Thread thread = new Thread(group, runnable, threadName, 0);
         if (thread.isDaemon()) {   //设为非后台线程
             thread.setDaemon(false);
@@ -46,7 +43,7 @@ public class DefaultThreadFactory implements ThreadFactory {
         thread.setUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() {
             @Override
             public void uncaughtException(Thread thread, Throwable ex) {
-                ARouter.logger.info(Consts.TAG, "Running task appeared exception! Thread [" + thread.getName() + "], because [" + ex.getMessage() + "]");
+                // ARouter.logger.info(Consts.TAG, "Running task appeared exception! Thread [" + thread.getName() + "], because [" + ex.getMessage() + "]");
             }
         });
         return thread;

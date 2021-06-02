@@ -16,7 +16,7 @@ compileJava {
 ext {
     PUBLISH_GROUP_ID = 'com.liby.init'
     PUBLISH_ARTIFACT_ID = 'InitAnnotation'//组件名
-    PUBLISH_VERSION = '1.0.0-SNAPSHOT'//组件版本
+    PUBLISH_VERSION = '2.0.0-SNAPSHOT'//组件版本
     PUBLISH_PACHAGE = 'jar'//打包类型，根据场景可选jar或aar
 }
 

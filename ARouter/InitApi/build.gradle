@@ -31,9 +31,9 @@ android {
 
 dependencies {
 
-    annotationProcessor 'com.liby.init:InitCompiler:1.0.0-SNAPSHOT'
+    annotationProcessor 'com.liby.init:InitCompiler:2.0.0-SNAPSHOT'
     // api 'com.liby.init:InitAnnotation:1.0.0-SNAPSHOT'
-    api 'com.liby.init:InitAnnotation:1.0.0-SNAPSHOT'
+    api 'com.liby.init:InitAnnotation:2.0.0-SNAPSHOT'
     implementation 'androidx.appcompat:appcompat:1.2.0'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
@@ -45,7 +45,7 @@ dependencies {
 ext {
     PUBLISH_GROUP_ID = 'com.liby.init'
     PUBLISH_ARTIFACT_ID = 'InitApi'//组件名
-    PUBLISH_VERSION = '1.0.0-SNAPSHOT'//组件版本
+    PUBLISH_VERSION = '2.0.0-SNAPSHOT'//组件版本
     PUBLISH_PACHAGE = 'aar'//打包类型，根据场景可选jar或aar
 }
 

@@ -2,6 +2,9 @@
 buildscript {
     repositories {
         maven { url uri("E:\\maven") }
+        maven {
+            url "http://localhost:8081/repository/maven-releases/"
+        }
         google()
         mavenCentral()
     }
@@ -16,6 +19,9 @@ buildscript {
 allprojects {
     repositories {
         maven { url uri("E:\\maven") }
+        maven {
+            url "http://localhost:8081/repository/maven-releases/"
+        }
         google()
         mavenCentral()
         jcenter() // Warning: this repository is going to shut down soon
